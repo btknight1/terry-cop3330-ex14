@@ -9,7 +9,6 @@ public class App
 {
     public static void main( String[] args )
     {
-
         double subtotal;
         double tax = 0;
         double total;
@@ -29,10 +28,13 @@ public class App
         {
             tax = (5.5/100);
             total = total + (order_amount*tax);
+            System.out.printf("The subtotal is $%.2f.%n", order_amount);
+            System.out.printf("The tax is $%.2f.%n", tax*subtotal);
+            System.out.printf("The total is $%.2f.", total);
         }
-
-        System.out.printf("The subtotal is $%.2f.%n", order_amount);
-        System.out.printf("The tax is $%.2f.%n", tax*subtotal);
-        System.out.printf("The total is $%.2f.", total);
+        else
+        {
+            System.out.printf("The total is $%.2f.", total);
+        }
     }
 }
